@@ -1,0 +1,24 @@
+
+
+<app-range-slider [label]="'Weight Distribution'" [minValue]="0" [maxValue]="100" [(currentValue)]="tuningValues.weightDistribution" ></app-range-slider>
+<h2>Anti-Roll Bars</h2>
+<div class="flex flex-row">
+    <app-range-slider class="w-1/2" [label]="'Min'" [minValue]="1" [maxValue]="65" [(currentValue)]="tuningValues.rollBarmin" ></app-range-slider>
+    <app-range-slider class="w-1/2" [label]="'Max'" [minValue]="1" [maxValue]="65" [(currentValue)]="tuningValues.rollBarmax" ></app-range-slider>
+</div>
+<h2>Springs</h2>
+<div class="flex flex-row">
+    <app-range-slider class="w-1/2" [label]="'Min'" [minValue]="50" [maxValue]="230" [(currentValue)]="tuningValues.springsmin" ></app-range-slider>
+    <app-range-slider class="w-1/2" [label]="'Max'" [minValue]="50" [maxValue]="230" [(currentValue)]="tuningValues.springsmax" ></app-range-slider>
+</div>
+<h2>Shocks</h2>
+<div class="flex flex-row">
+    <app-range-slider class="w-1/2" [label]="'Min'" [minValue]="1" [maxValue]="65" [(currentValue)]="tuningValues.shocksmin" ></app-range-slider>
+    <app-range-slider class="w-1/2" [label]="'Max'" [minValue]="1" [maxValue]="65" [(currentValue)]="tuningValues.shocksmax" ></app-range-slider>
+</div>
+
+<div class="w-full flex content-between">
+    <button class="text-white bg-emerald-400 hover:bg-emerald-300 rounded-lg p-3 m-5" (click)="setDefaultValues()" >Use default values</button>
+    
+    <button class="text-white bg-emerald-600 hover:bg-emerald-500 rounded-lg p-3 m-5" (click)="generateTune()" >Tune</button>
+</div>
