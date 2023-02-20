@@ -24,8 +24,8 @@
             <app-range-slider class="w-1/2 min-w-[300px]" [label]="'Max'" [minValue]="1" [maxValue]="65" [(currentValue)]="tuningValues.shocksmax" ></app-range-slider>
         </div>
     </div>
-    <div class="w-full flex justify-between">
+    <div class="w-full flex justify-between flex-wrap">
         <button class="text-white drop-shadow-2xl bg-neutral-900 hover:bg-gray-900-900 border-solid border-white border-2 hover:border-orange-500 rounded-lg p-3 my-5" (click)="setDefaultValues()" >Use default values</button>
-        <button class="text-white drop-shadow-2xl rounded-lg p-3 my-5 w-80 bg-gradient-to-r from-orange-500 to-pink-600 hover:from-orange-400 hover:to-pink-500" (click)="generateTune()" href="#tune">Tune</button>
+        <button class="text-white drop-shadow-2xl rounded-lg p-3 my-5 w-80 min-w-[320px] bg-gradient-to-r from-orange-500 to-pink-600 hover:from-orange-400 hover:to-pink-500" (click)="generateTune()" href="#tune">Tune</button>
     </div>
 </div>

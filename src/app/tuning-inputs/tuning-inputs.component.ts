@@ -32,6 +32,11 @@ export class TuningInputsComponent implements OnInit {
 
   generateTune(){
     this.info.setTuningValues(this.tuningValues);
+    document.getElementById("tune")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+      });
   }
 
 }
