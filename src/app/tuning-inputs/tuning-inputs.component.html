@@ -1,23 +1,31 @@
 <div class="flex justify-center flex-col">
-    <app-range-slider [label]="'Weight Distribution'" [minValue]="0" [maxValue]="100" [(currentValue)]="tuningValues.weightDistribution" ></app-range-slider>
-    <h2>Anti-Roll Bars</h2>
-    <div class="flex flex-row flex-wrap justify-center">
-        <app-range-slider class="w-1/2 min-w-[300px]" [label]="'Min'" [minValue]="1" [maxValue]="65" [(currentValue)]="tuningValues.rollBarmin" ></app-range-slider>
-        <app-range-slider class="w-1/2 min-w-[300px]" [label]="'Max'" [minValue]="1" [maxValue]="65" [(currentValue)]="tuningValues.rollBarmax" ></app-range-slider>
+    <div class="mt-3 p-4 rounded-lg bg-slate-100 drop-shadow-2xl dark:bg-neutral-900">
+        <h2 class="text-black dark:text-white">Weight Distribution</h2>
+        <app-range-slider [label]="''" [minValue]="0" [maxValue]="100" [(currentValue)]="tuningValues.weightDistribution" ></app-range-slider>
     </div>
-    <h2>Springs</h2>
-    <div class="flex flex-row flex-wrap justify-center">
-        <app-range-slider class="w-1/2 min-w-[300px]" [label]="'Min'" [minValue]="50" [maxValue]="230" [(currentValue)]="tuningValues.springsmin" ></app-range-slider>
-        <app-range-slider class="w-1/2 min-w-[300px]" [label]="'Max'" [minValue]="50" [maxValue]="230" [(currentValue)]="tuningValues.springsmax" ></app-range-slider>
+    <div class="mt-3 p-4 rounded-lg bg-slate-100 drop-shadow-2xl dark:bg-neutral-900">
+        <h2 class="text-black dark:text-white">Anti-Roll Bars</h2>
+        <div class="flex flex-row flex-wrap justify-center">
+            <app-range-slider class="w-1/2 min-w-[300px]" [label]="'Min'" [minValue]="1" [maxValue]="65" [(currentValue)]="tuningValues.rollBarmin" ></app-range-slider>
+            <app-range-slider class="w-1/2 min-w-[300px]" [label]="'Max'" [minValue]="1" [maxValue]="65" [(currentValue)]="tuningValues.rollBarmax" ></app-range-slider>
+        </div>
     </div>
-    <h2>Shocks</h2>
-    <div class="flex flex-row flex-wrap justify-center">
-        <app-range-slider class="w-1/2 min-w-[300px]" [label]="'Min'" [minValue]="1" [maxValue]="65" [(currentValue)]="tuningValues.shocksmin" ></app-range-slider>
-        <app-range-slider class="w-1/2 min-w-[300px]" [label]="'Max'" [minValue]="1" [maxValue]="65" [(currentValue)]="tuningValues.shocksmax" ></app-range-slider>
+    <div class="mt-3 p-4 rounded-lg bg-slate-100 drop-shadow-2xl dark:bg-neutral-900">
+        <h2 class="text-black dark:text-white">Springs</h2>
+        <div class="flex flex-row flex-wrap justify-center">
+            <app-range-slider class="w-1/2 min-w-[300px]" [label]="'Min'" [minValue]="50" [maxValue]="230" [(currentValue)]="tuningValues.springsmin" ></app-range-slider>
+            <app-range-slider class="w-1/2 min-w-[300px]" [label]="'Max'" [minValue]="50" [maxValue]="230" [(currentValue)]="tuningValues.springsmax" ></app-range-slider>
+        </div>
     </div>
-    
+    <div class="mt-3 p-4 rounded-lg bg-slate-100 drop-shadow-2xl dark:bg-neutral-900">
+        <h2 class="text-black dark:text-white">Shocks</h2>
+        <div class="flex flex-row flex-wrap justify-center">
+            <app-range-slider class="w-1/2 min-w-[300px]" [label]="'Min'" [minValue]="1" [maxValue]="65" [(currentValue)]="tuningValues.shocksmin" ></app-range-slider>
+            <app-range-slider class="w-1/2 min-w-[300px]" [label]="'Max'" [minValue]="1" [maxValue]="65" [(currentValue)]="tuningValues.shocksmax" ></app-range-slider>
+        </div>
+    </div>
     <div class="w-full flex justify-between">
-        <button class="text-white bg-emerald-400 hover:bg-emerald-300 rounded-lg p-3 m-5" (click)="setDefaultValues()" >Use default values</button>
-        <button class="text-white bg-emerald-600 hover:bg-emerald-500 rounded-lg p-3 m-5" (click)="generateTune()" href="#tune">Tune</button>
+        <button class="text-white drop-shadow-2xl bg-neutral-900 hover:bg-gray-900-900 border-solid border-white border-2 hover:border-orange-500 rounded-lg p-3 my-5" (click)="setDefaultValues()" >Use default values</button>
+        <button class="text-white drop-shadow-2xl rounded-lg p-3 my-5 w-80 bg-gradient-to-r from-orange-500 to-pink-600 hover:from-orange-400 hover:to-pink-500" (click)="generateTune()" href="#tune">Tune</button>
     </div>
 </div>
