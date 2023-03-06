@@ -25,8 +25,6 @@ export class TuningResultsComponent {
 
 
   calculateTune(tuning: TuningValues){
-    console.log(tuning);    
-    console.log((tuning.rollBarmax - tuning.rollBarmin) * (tuning.weightDistribution / 100) + tuning.rollBarmin);
     
     this.rollFront = (tuning.rollBarmax - tuning.rollBarmin) * (tuning.weightDistribution / 100) + tuning.rollBarmin;
     this.rollBack = (tuning.rollBarmax - tuning.rollBarmin) * ((100 - tuning.weightDistribution) / 100) + tuning.rollBarmin;
