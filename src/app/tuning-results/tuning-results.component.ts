@@ -25,18 +25,20 @@ export class TuningResultsComponent {
 
 
   calculateTune(tuning: TuningValues){
-    this.rollFront = (tuning.rollBarmax - tuning.rollBarmin) * (tuning.weightDistribution / 100) + tuning.rollBarmin
-    this.rollBack = (tuning.rollBarmax - tuning.rollBarmin) * ((100 - tuning.weightDistribution) / 100) + tuning.rollBarmin
+    console.log(tuning);    
+    console.log((tuning.rollBarmax - tuning.rollBarmin) * (tuning.weightDistribution / 100) + tuning.rollBarmin);
+    
+    this.rollFront = (tuning.rollBarmax - tuning.rollBarmin) * (tuning.weightDistribution / 100) + tuning.rollBarmin;
+    this.rollBack = (tuning.rollBarmax - tuning.rollBarmin) * ((100 - tuning.weightDistribution) / 100) + tuning.rollBarmin;
 
-    this.springsFront = (tuning.springsmax - tuning.springsmin) * (tuning.weightDistribution / 100) + tuning.springsmin
-    this.springsBack = (tuning.springsmax - tuning.springsmin) * ((100 - tuning.weightDistribution) / 100) + tuning.springsmin
+    this.springsFront = (tuning.springsmax - tuning.springsmin) * (tuning.weightDistribution / 100) + tuning.springsmin;
+    this.springsBack = (tuning.springsmax - tuning.springsmin) * ((100 - tuning.weightDistribution) / 100) + tuning.springsmin;
 
-    this.shocksReboundFront = (tuning.shocksmax - tuning.shocksmin) * (tuning.weightDistribution / 100) + tuning.shocksmin
-    this.shocksReboundBack = (tuning.shocksmax - tuning.shocksmin) * ((100 - tuning.weightDistribution) / 100) + tuning.shocksmin
+    this.shocksReboundFront = (tuning.shocksmax - tuning.shocksmin) * (tuning.weightDistribution / 100) + tuning.shocksmin;
+    this.shocksReboundBack = (tuning.shocksmax - tuning.shocksmin) * ((100 - tuning.weightDistribution) / 100) + tuning.shocksmin;
 
-    this.shocksDampFront = this.shocksReboundFront * 0.7
-    this.shocksDampBack = this.shocksReboundBack * 0.7
-
+    this.shocksDampFront = this.shocksReboundFront * 0.7;
+    this.shocksDampBack = this.shocksReboundBack * 0.7;
   }
 
 }

@@ -20,9 +20,11 @@ export class RangeSliderComponent{
 
   dec(){
     this.currentValue--;
+    this.selectedValueChanged();
   }
 
   inc(){
     this.currentValue++;
+    this.selectedValueChanged();
   }
 }

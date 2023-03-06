@@ -1,5 +1,4 @@
-import { InvokeFunctionExpr } from '@angular/compiler';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { TuningDataTransmission } from '../tuning-data-transmission';
 import { TuningValues } from '../tuning-values';
 
@@ -8,15 +7,12 @@ import { TuningValues } from '../tuning-values';
   templateUrl: './tuning-inputs.component.html',
   styleUrls: ['./tuning-inputs.component.css']
 })
-export class TuningInputsComponent implements OnInit {
+export class TuningInputsComponent {
 
 
-  @Input() tuningValues: TuningValues = new TuningValues(0,0,0,0,0,0,0);
+  tuningValues: TuningValues = new TuningValues(0,0,0,0,0,0,0);
 
   constructor(public info: TuningDataTransmission) { }
-
-  ngOnInit(): void {
-  }
 
   setDefaultValues(){
     if (this.tuningValues != null){
@@ -24,14 +20,16 @@ export class TuningInputsComponent implements OnInit {
       this.tuningValues.rollBarmax = 65;
       this.tuningValues.springsmin = 50;
       this.tuningValues.springsmax = 230;
-      this.tuningValues.shocksmin = 1;
-      this.tuningValues.shocksmax = 65;
+      this.tuningValues.shocksmin = 3;
+      this.tuningValues.shocksmax = 20;
       this.tuningValues.weightDistribution = 50;
     }
   }
 
   generateTune(){
     this.info.setTuningValues(this.tuningValues);
+
+
     document.getElementById("tune")?.scrollIntoView({
       behavior: "smooth",
       block: "start",
